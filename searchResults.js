@@ -1,3 +1,4 @@
+// Card Animation
 $(document).ready(function() {
   $("main .col-lg").hover(
     function() {
@@ -18,3 +19,5 @@ $(document).ready(function() {
     }
   );
 });
+
+// Sidebar Nav
