@@ -1,0 +1,38 @@
+body {
+
+   font-family: "Open Sans", Verdana, Arial, sans-serif;
+   font-size: 100%;
+   background-color: #000000;
+
+}
+
+.btn {
+   padding:5px 10px;
+   background:rgba(50, 50, 50, 0.2);
+   color: white;
+}
+
+.box-center {
+
+    margin: 5% auto;
+    width: 500px;
+
+}
+
+.search_bar {
+
+    position:absolute;  
+    left:48%;
+    top:45%;
+    width:10%;
+
+}
+
+
+.footer {
+
+    color: gray;
+    text-align: right;
+    padding: 1.5%; 
+
+}
