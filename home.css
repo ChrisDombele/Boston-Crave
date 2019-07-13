@@ -1,38 +1,85 @@
-body {
+<!DOCTYPE html>
 
-    font-family: "Open Sans", Verdana, Arial, sans-serif;
-    font-size: 100%;
-    background-color: #000000;
+<html lang="en">
 
-}
+<head>
 
-.btn {
+    <meta charset="UTF-8">
 
-    background:rgba(50, 50, 50, 0.2);
-    color: white;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-.box-center {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 
-    margin: 5% auto;
-    width: 765px;
+        crossorigin="anonymous">
 
-}
+    <link rel="stylesheet" href="home.css">
 
-.search_bar {
+</head>
 
-    position:absolute;  
-    left:41%;
-    top:45%;
-    width:10%;
+<div class="shadow"><img class="logo" src="https://i.ibb.co/mTyQRZQ/LogoOpt.png" alt="Crave Logo" /></div>
 
-}
+<div class="search_bar">
+  
+            <form class="form-inline">
+
+              <input class="form-control" type="search" placeholder="What's your crave?" aria-label="Search">
+
+              <button class="btn btn-outline-default search" type="submit">Search</button>
+
+            </form>
+
+</div>    
+
+<footer class="footer fotter-light bg-light fixed-bottom">
+
+<section>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#"></a>
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+
+                    <a class="nav-link" href="#">Home
+
+                        <span class="sr-only">(current)</span>
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#">Favorites</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="about.html">About</a>
+
+                </li>
+
+            </ul>
+
+    </nav>
+
+<section>
+
+        <span class="footer-textr justify-content-center">
+
+          Copyright 2019 &nbsp;
+
+        </span>
+
+</footer>
 
 
-.footer {
+</body>
 
-    color: black;
-    text-align: right;
 
-}
+</html
