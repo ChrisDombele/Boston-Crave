@@ -1,22 +1,26 @@
 body {
 
-   font-family: "Open Sans", Verdana, Arial, sans-serif;
-   font-size: 100%;
-   background-color: #000000;
+    font-family: "Open Sans", Verdana, Arial, sans-serif;
+    font-size: 100%;
+    background-color: #000000;
 
 }
 
 .btn {
 
-   background:rgba(50, 50, 50, 0.2);
-   color: white;
+    position:absolute;  
+    left:185%;
+    top:5%;
+    width:10%;
+    background:rgba(50, 50, 50, 0.2);
+    color: white;
 
 }
 
 .box-center {
 
     margin: 5% auto;
-    width: 665px;
+    width: 605px;
 
 }
 
@@ -32,8 +36,7 @@ body {
 
 .footer {
 
-    color: gray;
+    color: black;
     text-align: right;
-    padding: 1.5%; 
 
 }
