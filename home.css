@@ -8,10 +8,6 @@ body {
 
 .btn {
 
-    position:absolute;  
-    left:185%;
-    top:5%;
-    width:10%;
     background:rgba(50, 50, 50, 0.2);
     color: white;
 
@@ -20,7 +16,7 @@ body {
 .box-center {
 
     margin: 5% auto;
-    width: 605px;
+    width: 765px;
 
 }
 
