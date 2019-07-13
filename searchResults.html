@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Boston Crave</title>
+  <link rel="stylesheet" href="searchResults.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="container-fluid">
+      <form action="/action_page.php">
+        <div class="row">
+          <div id="searchBar" class="col-lg text-center">
+            <input type="text" name="search" placeholder="Search your craving" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg text-center">
+            <span>Distance:</span><br />
+            <input type="text" name="distance" placeholder="15mi" />
+          </div>
+          <div class="col-lg text-center">
+            <span>Rating:</span><br />
+            <select>
+              <option value="1">&#128970;</option>
+              <option value="2">&#128970;&#128970;</option>
+              <option value="3">&#128970;&#128970;&#128970;</option>
+              <option value="4">&#128970;&#128970;&#128970;&#128970;</option>
+              <option value="5">&#128970;&#128970;&#128970;&#128970;&#128970;</option>
+            </select>
+          </div>
+          <div class="col-lg text-center">
+            <span>Price:</span><br />
+            <select>
+              <option value="1">$</option>
+              <option value="2">$$</option>
+              <option value="3">$$$</option>
+              <option value="4">$$$$</option>
+              <option value="5">$$$$$</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <!--  -->
+  <div id="side-menu" class="side-nav">
+    <h1>Favorites List</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom myBtn style="
+            width: 5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div id="star" class="col-lg-1 text-center">
+          <!--  -->
+          &#128970;
+          <!--  -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom myBtn style="
+            width: 5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+      <!--  -->
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+      <!--  -->
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+      <!--  -->
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+      <!--  -->
+      <div class="row">
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-lg">
+          <!--  -->
+          <div data-toggle="modal" data-target="#exampleModal" class="card text-center mx-auto bg-custom style=" width:
+            5rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="flowers.jpg" alt="image" class="img-fluid">
+          <p>&#128970; &#128970; &#128970; &#128970; &#128970; $ $ $ $ $</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum pharetra finibus. Nullam placerat
+            vehicula neque, non dapibus velit pharetra at. Mauris pulvinar eleifend pellentesque. Vivamus interdum
+            semper ante a efficitur. Aenean venenatis eget sem non ullamcorper. Quisque finibus lacus justo, et
+            tristique turpis ullamcorper et. Fusce eget massa eget lorem condimentum lobortis. Fusce vehicula ex ac eros
+            hendrerit, pharetra eleifend sem iaculis. Vestibulum a consectetur sem. Proin condimentum pulvinar ante, sed
+            dignissim enim laoreet in. Donec accumsan pretium ligula in lobortis. Mauris hendrerit lectus et massa
+            porttitor rutrum. Aliquam vulputate laoreet libero, sed vestibulum elit eleifend ac. Fusce vel iaculis
+            metus.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://google.com" target="_blank">Visit Google</a>
+          <a href="https://google.com" target="_blank">Visit Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <button class="circleButton"><a href="home.html"></a></button>
+    <button class="circleButton"><a href="about.html"></a></button>
+    <button class="circleButton" onclick="openSlideMenu()"></button>
+
+    <div class="rightdiv">
+      <button class="circleButton"></button>
+      <button class="circleButton"></button>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="searchResults.js"></script>
+
+</body>
+
+</html>
