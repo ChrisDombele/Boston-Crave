@@ -47,11 +47,13 @@ main {
   color: #FEFEFE;
 }
 
+/* Crave Info */
 #crave-desc {
   padding-right: 2em;
   padding-left: 2em;
 }
 
+/* Developer Info */
 #dev-desc{
   text-align: center;
   margin-top: 3em;
