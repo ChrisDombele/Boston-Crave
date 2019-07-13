@@ -7,22 +7,23 @@ body {
 }
 
 .btn {
-   padding:5px 10px;
+
    background:rgba(50, 50, 50, 0.2);
    color: white;
+
 }
 
 .box-center {
 
     margin: 5% auto;
-    width: 500px;
+    width: 665px;
 
 }
 
 .search_bar {
 
     position:absolute;  
-    left:48%;
+    left:41%;
     top:45%;
     width:10%;
 
