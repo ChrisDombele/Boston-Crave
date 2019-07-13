@@ -21,3 +21,14 @@ $(document).ready(function() {
 });
 
 // Sidebar Nav
+function openSlideMenu() {
+  document.getElementById("side-menu").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+$(document).mouseup(function(e) {
+  const menu = document.getElementById("side-menu");
+  if (e.target != menu && e.target.parentNode != menu) {
+    menu.style.width = "0";
+  }
+});
