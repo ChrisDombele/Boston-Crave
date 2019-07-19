@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -369,7 +368,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img src="flowers.jpg" alt="image" class="img-fluid">
+          <img src="/images/flowers.jpg" alt="image" class="img-fluid">
           <p>&#128970; &#128970; &#128970; &#128970; &#128970; $ $ $ $ $</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum pharetra finibus. Nullam placerat
             vehicula neque, non dapibus velit pharetra at. Mauris pulvinar eleifend pellentesque. Vivamus interdum
@@ -390,16 +389,19 @@
 
 
   <footer>
-    <button class="circleButton"><a href="home.html"></a></button>
-    <button class="circleButton"><a href="about.html"></a></button>
-    <button class="circleButton" onclick="openSlideMenu()"></button>
+    <div class="leftdiv">
+      <a href="http://google.com" class="gh">Home</a>
+      <a href="http://google.com" class="gh">About</a>
+      <a href="" onclick="openSlideMenu()" class="gh">Favorites</a>
+    </div>
 
     <div class="rightdiv">
-      <button class="circleButton"></button>
-      <button class="circleButton"></button>
+      <a href="http://google.com" class="gh">Home</a>
+      <a href="http://google.com" class="gh">Home</a>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

@@ -23,7 +23,6 @@ $(document).ready(function() {
 // Sidebar Nav
 function openSlideMenu() {
   document.getElementById("side-menu").style.width = "350px";
-  document.getElementById("main").style.marginLeft = "350px";
 }
 
 $(document).mouseup(function(e) {
