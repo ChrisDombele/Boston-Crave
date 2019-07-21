@@ -82,24 +82,32 @@ main {
 
 /* Footer */
 .circleButton {
-  width: 50px;
-  height: 50px;
-  background: #788e9e;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
   border-radius: 50%;
-  border: none;
-  -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: 0.4s;
+  bottom: 0;
+  position: fixed;
   margin-left: 1em;
+  margin-bottom: 1em;
 }
 
-.circleButton:active {
-  transform: translateY(4px);
+.circleButton:hover {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  text-decoration: none;
 }
 
-.circleButton:focus {
-  outline: none;
-}
 
 footer {
   display: inline-block;
