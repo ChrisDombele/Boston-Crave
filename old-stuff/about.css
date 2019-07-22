@@ -43,6 +43,8 @@ header h1 {
 #view {
   width: 100%;
   height: 50em;
+  text-align: center;
+  position: relative;
 }
 
 #view-image {
@@ -61,8 +63,6 @@ header h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  padding: 20px;
   width: 100%;
   text-transform: uppercase;
   font-style: italic;
@@ -91,6 +91,11 @@ main {
   padding-right: 5em;
   padding-left: 5em;
   font-size: 2em;
+}
+
+hr {
+  background-color: #FEFEFE;
+  width: 70%;
 }
 
 /* Developer Info */
@@ -136,7 +141,6 @@ main {
   background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
   transition: 0.4s;
   bottom: 0;
-  position: fixed;
   margin-left: 1em;
   margin-bottom: 1em;
 }
@@ -148,7 +152,15 @@ main {
   text-decoration: none;
 }
 
-
 footer {
   display: inline-block;
+}
+
+@media (max-width: 1500px) {
+  #crave-title {
+    font-size: 5em;
+  }
+  #crave-desc {
+    font-size: 1.5em;
+  }
 }
