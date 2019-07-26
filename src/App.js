@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const URL = "https://api.yelp.com/v3/businesses/search";
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const URL = "api.yelp.com/v3/businesses/search";
 
 const config = {
   headers: {
@@ -24,7 +25,7 @@ class App extends Component {
 
   handleClick() {
     axios
-      .get(URL, config)
+      .get(proxyurl + URL, config)
       .then(response => {
         // If request is good...
         console.log(response.data);
