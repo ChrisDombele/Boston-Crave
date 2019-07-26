@@ -37,7 +37,6 @@ header {
 
 header h1 {
   font-weight: bold;
-  font-style: italic;
 }
 
 #view {
@@ -57,14 +56,13 @@ header h1 {
 }
 
 #crave-title {
-  color: brown;
+  color: #709dff;
   font-weight: bolder;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  text-transform: uppercase;
   font-style: italic;
   text-align: center;
   font-size: 10em;
@@ -157,11 +155,17 @@ footer {
 }
 
 /* Responsive Rules */
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   #crave-title {
-    font-size: 5em;
+    font-size: 8em;
   }
   #crave-desc {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 900px){
+  #crave-title {
+    font-size: 6em;
   }
 }
