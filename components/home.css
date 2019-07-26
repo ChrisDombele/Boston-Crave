@@ -1,0 +1,63 @@
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .form-control {
+    transition: 0.7s;
+  }
+
+  .overlay {
+    background: #292E49;  /* in case old browsers cannot support certain CSS elements */
+    background: linear-gradient(to right, #33194c, #292E49); /* IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .online-form {
+    position: relative;
+  }
+
+  .online-form .form-control {
+    border-color: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 40px;
+    height: 50px;
+    margin-right: -4.2em;
+    padding-left: 15px;
+  }
+
+  .online-form input[type="text"] {
+    width: 90%;
+  }
+
+  .online-form button {
+    background: #0e223f;
+    border: 0;
+    color: #ffffff;
+    position: absolute;
+    right: 4em;
+    width: 20%;
+  }
+
+  .online-form button:hover {
+    background: #0c0c0c;
+    color: #ffffff;
+  }
+
+  #home {
+    background: url('home-bg.jpg') no-repeat center center;
+    background-size: cover;
+    vertical-align: middle;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 15em;
+    text-align: center;
+  }
