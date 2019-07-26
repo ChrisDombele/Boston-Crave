@@ -1,40 +1,63 @@
-body {
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
 
-    font-family: "Open Sans", Verdana, Arial, sans-serif;
-    font-size: 100%;
-    overflow-x: hidden;
+  .form-control {
+    transition: 0.7s;
+  }
+
+  .overlay {
+    background: #292E49;  /* in case old browsers cannot support certain CSS elements */
+    background: linear-gradient(to right, #33194c, #292E49); /* IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #7f5a83;
-    background-image: linear-gradient(135deg, #7f5a83 0%, #0d324d 74%);
+  }
 
-}
+  .online-form {
+    position: relative;
+  }
 
-.btn {
+  .online-form .form-control {
+    border-color: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 40px;
+    height: 50px;
+    margin-right: -4.2em;
+    padding-left: 15px;
+  }
 
-    background:rgba(50, 50, 50, 0.2);
-    color: white;
+  .online-form input[type="text"] {
+    width: 90%;
+  }
 
-}
+  .online-form button {
+    background: #0e223f;
+    border: 0;
+    color: #ffffff;
+    position: absolute;
+    right: 4em;
+    width: 20%;
+  }
 
-#logo {
+  .online-form button:hover {
+    background: #0c0c0c;
+    color: #ffffff;
+  }
 
-    background-image: url("LogoOpt.png");
-    background-repeat: no-repeat;
-    background-position: center;
+  #home {
+    background: url('home-bg.jpg') no-repeat center center;
     background-size: cover;
-    width: 500px;
-    height: 250px;
-    top: 50%;
-    left: 50%;
-}
-
-.search_bar {
-
-    position:absolute;  
-    left:43%;
-    top:45%;
-
-}
+    vertical-align: middle;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 15em;
+    text-align: center;
+  }
