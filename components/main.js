@@ -1,7 +1,5 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-const stuff;
-
 var settings = {
   async: true,
   crossDomain: true,
@@ -23,24 +21,13 @@ $(document).ready(function() {
   $("input").keyup(function() {
     var keycode = event.keyCode ? event.keyCode : event.which;
     if (keycode == "13") {
-      $.ajax(settings).done(function(response) {
-        const newData = myData.map(item => ({
-            id: item.id,
-            title: item.title
-         }))
-      });
+      $.ajax(settings).done(function(response) {});
     }
   });
-  
-  newData.forEach(item => {
-          console.log(item)
-   });
 });
 
-
 function handleClick() {
-    $.ajax(settings).done(function(response) {
-      console.log(response);
-    });
-  }
-
+  $.ajax(settings).done(function(response) {
+    console.log(response);
+  });
+}
