@@ -25,6 +25,43 @@ $(document).ready(function() {
     if (keycode == "13") {
       $.ajax(settings).done(function(response) {
         console.log(response);
+
+        var prefix = "card-title";
+        for (var i = 0; i < 16; i++) {
+          if (document.getElementById(prefix + i)) {
+            document.getElementById(prefix + i).innerHTML =
+              response.businesses[i].name;
+          }
+        }
+
+        var prefix1 = "card-location";
+        for (var i = 0; i < 16; i++) {
+          if (document.getElementById(prefix1 + i)) {
+            document.getElementById(prefix1 + i).innerHTML =
+              response.businesses[i].display_phone;
+          }
+        }
+
+        var prefix2 = "url";
+        for (var i = 0; i < 16; i++) {
+          if (document.getElementById(prefix2 + i)) {
+            document
+              .getElementById(prefix2 + i)
+              .setAttribute("href", response.businesses[i].url);
+          }
+        }
+
+        var prefix3 = "map";
+        for (var i = 0; i < 16; i++) {
+          if (document.getElementById(prefix3 + i)) {
+            document
+              .getElementById(prefix3 + i)
+              .setAttribute(
+                "href",
+                "https://maps.google.com/?" + response.businesses[i].coordinates
+              );
+          }
+        }
       });
     }
   });
@@ -35,5 +72,6 @@ function handleClick() {
     data = response;
     console.log(data);
     console.log(data.businesses[0].name);
+    document.getElementById("card-title1").innerHTML = data.businesses[0].name;
   });
 }
