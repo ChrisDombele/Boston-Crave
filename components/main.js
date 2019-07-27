@@ -1,5 +1,5 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-
+var jsondata;
 var settings = {
   async: true,
   crossDomain: true,
@@ -21,13 +21,17 @@ $(document).ready(function() {
   $("input").keyup(function() {
     var keycode = event.keyCode ? event.keyCode : event.which;
     if (keycode == "13") {
-      $.ajax(settings).done(function(response) {});
+      $.ajax(settings).done(function(response) {
+        console.log(response);
+      });
     }
   });
 });
 
 function handleClick() {
-  $.ajax(settings).done(function(response) {
-    console.log(response);
-  });
+  $.ajax(settings).done(function(response) {});
+}
+
+function buttonStuff() {
+  console.log(jsondata);
 }
