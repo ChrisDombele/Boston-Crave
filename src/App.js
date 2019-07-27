@@ -11,8 +11,7 @@ const config = {
   },
   params: {
     term: "tacos",
-    location: "Boston",
-    offset: "50"
+    location: "Boston"
   }
 };
 
@@ -27,10 +26,10 @@ class App extends Component {
   handleClick() {
     axios
       .get(proxyurl + URL, config)
+
       .then(response => {
         // If request is good...
-        console.log(response.data);
-        this.setState();
+        console.log(response);
       })
       .catch(error => {
         console.log("error 3 " + error);
