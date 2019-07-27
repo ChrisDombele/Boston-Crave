@@ -1,11 +1,7 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-<<<<<<< HEAD
-var jsondata;
-=======
 
 var data = [];
 
->>>>>>> master
 var settings = {
   async: true,
   crossDomain: true,
@@ -35,17 +31,9 @@ $(document).ready(function() {
 });
 
 function handleClick() {
-<<<<<<< HEAD
-  $.ajax(settings).done(function(response) {});
-}
-
-function buttonStuff() {
-  console.log(jsondata);
-=======
   $.ajax(settings).done(function(response) {
     data = response;
     console.log(data);
     console.log(data.businesses[0].name);
   });
->>>>>>> master
 }
