@@ -23,7 +23,6 @@ import AboutPage from "./pages/about";
 import ResultsPage from "./pages/searchResults";
 import HomePage from "./pages/home";
 
-
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const URL = "https://api.yelp.com/v3/businesses/search";
 
@@ -39,28 +38,54 @@ const config = {
 };
 
 class App extends Component {
-
   render() {
     return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/searchResults" exact strict render= {
-          () => {
-            return(
-              <div>
-          <SearchResultsNav />
-          <Container>
-            <Row className="justify-content-md-center">
-              {this.renderMatches()}
-            </Row>
-          </Container>
-        </div>
-            );
-            }}/>
-        <Route exact path="/about" component={AboutPage} />
-      </Switch>
-    </Router>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/searchResults"
+            exact
+            strict
+            render={() => {
+              return (
+                <div>
+                  <SearchResultsNav />
+                  <Container>
+                    <Row className="justify-content-md-center">
+                      {this.renderMatches()}
+                    </Row>
+                  </Container>
+                  <footer>
+                    <div className="leftdiv">
+                      <a href="home.html" className="gh">
+                        Home
+                      </a>
+                      <a href="about.html" className="gh">
+                        About
+                      </a>
+                      <a href="#" onclick="openSlideMenu()" className="gh">
+                        Favorites
+                      </a>
+                    </div>
+
+                    <div className="rightdiv">
+                      <a href="http://google.com" className="gh">
+                        Prev
+                      </a>
+                      <a href="http://google.com" className="gh">
+                        Next
+                      </a>
+                    </div>
+                  </footer>
+                </div>
+              );
+            }}
+          />
+          <Route exact path="/about" component={AboutPage} />
+        </Switch>
+      </Router>
     );
   }
 
@@ -106,7 +131,7 @@ class App extends Component {
       );
     });
   }
-  
+
   // render() {
   //   return (
   //     <div>
