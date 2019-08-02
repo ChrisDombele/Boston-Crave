@@ -1,21 +1,163 @@
 /* Global */
-* {
-  box-sizing: border-box;
+html,
+body,
+header,
+footer,
+hgroup,
+nav,
+main,
+article,
+section,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+ul,
+li,
+body,
+div,
+p,
+img {
   margin: 0;
   padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+  padding: 1em;
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #7f5a83;
+  background-image: linear-gradient(135deg, #7f5a83 0%, #0d324d 74%);
+}
+
+/* Nav */
+input[type="text"],
+select {
+  width: 30%;
+  height: 30px;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#searchBar {
+  margin-bottom: 2em;
+}
+
+/* Sidebar Nav */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav .card {
+  margin-left: 2em;
+  height: 20rem;
+}
+
+.side-nav h1 {
+  color: #fff;
+}
+
+.side-nav #star {
+  color: #fff;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
 }
 
 /* Main */
-.button {
-  background-color: green;
-  border: none;
-  color: white;
-  font-size: 16px;
-  height: 40px;
-  width: 200px;
+main {
+  margin: 2em 5em 5em 5em;
+}
+
+.card {
+  margin: 1em 0 1em 0;
+}
+
+.card * {
+  color: #fff;
+}
+
+.card {
+  background-color: #788e9e;
+}
+
+.card:hover {
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+span {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+/* Footer */
+footer a:not(:last-child) {
+  margin-right: 1em;
+}
+
+footer {
+  display: inline-block;
+}
+
+.leftdiv {
+  float: left;
+}
+
+.rightdiv {
+  float: right;
+}
+
+.gh {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: 0.4s;
+}
+
+.gh:hover {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  text-decoration: none;
 }

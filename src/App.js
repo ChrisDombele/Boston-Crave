@@ -4,6 +4,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import SearchResultsNav from "./SearchResultsNav.js";
+import Button from "react-bootstrap/Button";
+import Modal from "./Modal.js";
+import Apps from "./App.css";
 
 // Import Router for React
 import {
@@ -76,19 +80,16 @@ class App extends Component {
     return this.state.data.map(data => {
       return (
         <Col md="auto">
-          <Card style={{ width: "18rem" }}>
+          <Card
+            className="text-center"
+            style={{ width: "18rem", height: "12rem" }}
+          >
             <Card.Body>
               <Card.Title>{data.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                {data.display_phone}
-              </Card.Subtitle>
-              <Card.Text>Review Count: {data.review_count}</Card.Text>
-              <Card.Link target="_blank" href={data.url}>
-                URL
-              </Card.Link>
-              <Card.Link target="_blank" href="#">
-                Another Link
-              </Card.Link>
+              <Card.Text>{data.display_phone}</Card.Text>
+              <Card.Text className="bottomCard">
+                Review Count: {data.review_count}
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -98,9 +99,14 @@ class App extends Component {
   
   render() {
     return (
-      <Container>
-        <Row>{this.renderMatches()}</Row>
-      </Container>
+      <div>
+        <SearchResultsNav />
+        <Container>
+          <Row className="justify-content-md-center">
+            {this.renderMatches()}
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
