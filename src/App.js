@@ -31,7 +31,10 @@ class App extends Component {
     axios
       .get(proxyurl + URL, config)
       .then(response => {
-        this.setState({ data: response.data.businesses });
+        this.setState({
+          data: response.data.businesses,
+          key: response.data.businesses.id
+        });
         console.log(this.state.data);
       })
       .catch(error => {
@@ -39,29 +42,34 @@ class App extends Component {
       });
   }
 
+  renderMatches() {
+    return this.state.data.map(data => {
+      return (
+        <Col md="auto">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.Title>{data.name}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                {data.display_phone}
+              </Card.Subtitle>
+              <Card.Text>Review Count: {data.review_count}</Card.Text>
+              <Card.Link target="_blank" href={data.url}>
+                URL
+              </Card.Link>
+              <Card.Link target="_blank" href="#">
+                Another Link
+              </Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
+      );
+    });
+  }
+
   render() {
     return (
       <Container>
-        {this.state.data.map(data => (
-          <Row>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <Card.Title>{data.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    Card Subtitle
-                  </Card.Subtitle>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        ))}
+        <Row>{this.renderMatches()}</Row>
       </Container>
     );
   }
