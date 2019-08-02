@@ -9,6 +9,21 @@ import Button from "react-bootstrap/Button";
 import Modal from "./Modal.js";
 import Apps from "./App.css";
 
+// Import Router for React
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from "react-router-dom";
+
+//Import Pages
+import AboutPage from "./pages/about";
+import ResultsPage from "./pages/searchResults";
+import HomePage from "./pages/home";
+
+
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const URL = "https://api.yelp.com/v3/businesses/search";
 
@@ -24,6 +39,31 @@ const config = {
 };
 
 class App extends Component {
+
+  render() {
+    return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/searchResults" exact strict render= {
+          () => {
+            return(
+              <div>
+          <SearchResultsNav />
+          <Container>
+            <Row className="justify-content-md-center">
+              {this.renderMatches()}
+            </Row>
+          </Container>
+        </div>
+            );
+            }}/>
+        <Route exact path="/about" component={AboutPage} />
+      </Switch>
+    </Router>
+    );
+  }
+
   constructor() {
     super();
     this.state = {
@@ -66,18 +106,18 @@ class App extends Component {
       );
     });
   }
-
-  render() {
-    return (
-      <div>
-        <SearchResultsNav />
-        <Container>
-          <Row className="justify-content-md-center">
-            {this.renderMatches()}
-          </Row>
-        </Container>
-      </div>
-    );
-  }
+  
+  // render() {
+  //   return (
+  //     <div>
+  //       <SearchResultsNav />
+  //       <Container>
+  //         <Row className="justify-content-md-center">
+  //           {this.renderMatches()}
+  //         </Row>
+  //       </Container>
+  //     </div>
+  //   );
+  // }
 }
 export default App;

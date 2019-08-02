@@ -1,0 +1,171 @@
+/* Global */
+html,
+body,
+header,
+footer,
+hgroup,
+nav,
+main,
+article,
+section,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+ul,
+li,
+body,
+div,
+p,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  color: #FEFEFE;
+  background-color: black;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+header h1 {
+  font-weight: bold;
+}
+
+#view {
+  width: 100%;
+  height: 50em;
+  text-align: center;
+  position: relative;
+}
+
+#view-image {
+  background-image: url("../images/boston.jpg");
+  opacity: .5;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#crave-title {
+  color: #709dff;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  font-size: 10em;
+}
+
+.aboutPage {
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #7f5a83;
+  background-image: linear-gradient(135deg, #7f5a83 0%, #0d324d 74%);
+}
+
+main {
+  padding: 1em;
+  color: #FEFEFE;
+}
+
+/* Crave Info */
+#crave-desc {
+  text-align: center;
+  padding-right: 5em;
+  padding-left: 5em;
+  font-size: 2em;
+}
+
+hr {
+  background-color: #FEFEFE;
+  width: 70%;
+}
+
+/* Developer Info */
+#dev-desc{
+  text-align: center;
+  margin-top: 3em;
+}
+
+.dev-card {
+  margin: 2em 2em;
+  width: 300px;
+  display: inline-block;
+  background-color: #0d324d;
+  border: solid;
+  border-color: #7f5a83;
+}
+
+.dev-card img {
+  width: 80px;
+  padding: 5px;
+  height: 100%;
+  float: left;
+}
+
+.dev-card h3 {
+  font-size: 20px;
+  float: left;
+}
+
+/* Footer */
+.circleButton {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: 0.4s;
+  bottom: 0;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.circleButton:hover {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  text-decoration: none;
+}
+
+footer {
+  display: inline-block;
+}
+
+/* Responsive Rules */
+@media (max-width: 1600px) {
+  #crave-title {
+    font-size: 8em;
+  }
+  #crave-desc {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 900px){
+  #crave-title {
+    font-size: 6em;
+  }
+}
