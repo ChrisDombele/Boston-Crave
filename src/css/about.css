@@ -68,6 +68,10 @@ header h1 {
   font-size: 10em;
 }
 
+body {
+  padding: 0;
+}
+
 .aboutPage {
   /* overflow-y: hidden; */
   overflow-x: hidden;
