@@ -4,6 +4,8 @@ import '../css/home.css';
 // Photos used
 import Logo from '../images/LogoOpt.png';
 
+import { Link } from 'react-router-dom';
+
 const HomePage = () => {
     return (
         <div className="Home">
@@ -16,8 +18,10 @@ const HomePage = () => {
                             <img src={Logo} className="img-responsive" alt="Crave Logo" height="800" width="600"/>
                             <div className="home-info">
                                 <form action="searchResults.html" method="get" className="online-form" >
-                                    <input type="text" name="text"className="form-control" placeholder="What's Your Crave?"required="" />
-                                    <button type="submit" className="form-control" onClick="handleClick()">Search</button>
+                                    <input type="text" name="text"className="form-control" placeholder="What's Your Crave?" required />
+                                    <Link to="/searchResults">
+                                        <button type="submit" className="form-control">Search</button>
+                                    </Link>
                                 </form>
                             </div>
                         </div>

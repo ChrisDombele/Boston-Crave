@@ -40,19 +40,29 @@ const config = {
 
 class App extends Component {
 
-  /** 
   render() {
     return (
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/searchresults" component={ResultsPage} />
+        <Route exact path="/searchResults" exact strict render= {
+          () => {
+            return(
+              <div>
+          <SearchResultsNav />
+          <Container>
+            <Row className="justify-content-md-center">
+              {this.renderMatches()}
+            </Row>
+          </Container>
+        </div>
+            );
+            }}/>
         <Route exact path="/about" component={AboutPage} />
       </Switch>
     </Router>
     );
   }
-  */
 
   constructor() {
     super();
@@ -97,17 +107,17 @@ class App extends Component {
     });
   }
   
-  render() {
-    return (
-      <div>
-        <SearchResultsNav />
-        <Container>
-          <Row className="justify-content-md-center">
-            {this.renderMatches()}
-          </Row>
-        </Container>
-      </div>
-    );
-  }
+  // render() {
+  //   return (
+  //     <div>
+  //       <SearchResultsNav />
+  //       <Container>
+  //         <Row className="justify-content-md-center">
+  //           {this.renderMatches()}
+  //         </Row>
+  //       </Container>
+  //     </div>
+  //   );
+  // }
 }
 export default App;
