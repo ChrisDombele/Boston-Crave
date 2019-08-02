@@ -5,6 +5,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
+// Import Router for React
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from "react-router-dom";
+
+//Import Pages
+import AboutPage from "./pages/about";
+import ResultsPage from "./pages/searchResults";
+import HomePage from "./pages/home";
+
+
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const URL = "https://api.yelp.com/v3/businesses/search";
 
@@ -20,6 +35,21 @@ const config = {
 };
 
 class App extends Component {
+
+  /** 
+  render() {
+    return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/searchresults" component={ResultsPage} />
+        <Route exact path="/about" component={AboutPage} />
+      </Switch>
+    </Router>
+    );
+  }
+  */
+
   constructor() {
     super();
     this.state = {
@@ -65,7 +95,7 @@ class App extends Component {
       );
     });
   }
-
+  
   render() {
     return (
       <Container>
