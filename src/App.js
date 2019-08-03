@@ -32,12 +32,16 @@ const config = {
       "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
   },
   params: {
-    term: "tacos",
+    term: "bar",
     location: "Boston"
   }
 };
 
 class App extends Component {
+  myCallback = dataFromChild => {
+    config.params.term = dataFromChild;
+  };
+
   render() {
     return (
       <Router>
