@@ -32,7 +32,7 @@ const config = {
       "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
   },
   params: {
-    term: "tacos",
+    term: "bars",
     location: "Boston"
   }
 };
@@ -59,10 +59,10 @@ class App extends Component {
                   </Container>
                   <footer>
                     <div className="leftdiv">
-                      <a href="home.html" className="gh">
+                      <a href="/" className="gh">
                         Home
                       </a>
-                      <a href="about.html" className="gh">
+                      <a href="/about" className="gh">
                         About
                       </a>
                       <a href="#" onclick="openSlideMenu()" className="gh">
