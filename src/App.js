@@ -26,19 +26,92 @@ import HomePage from "./pages/home";
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const URL = "https://api.yelp.com/v3/businesses/search";
 
-const config = {
-  headers: {
-    Authorization:
-      "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
-  },
-  params: {
-    term: "bars",
-    location: "Boston"
-  }
-};
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      post: {
+        name: "",
+        radius: "1000",
+        rating: "1.0",
+        price: "4"
+      },
+      jobs: []
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange = e => {
+    const { name, value } = e.target;
+
+    this.setState(prevState => ({
+      post: { ...prevState.post, [name]: value }
+    }));
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.setState(prevState => ({
+      jobs: [...prevState.jobs, prevState.post],
+      post: { name: "", radius: "", rating: "", price: "" }
+    }));
+    this.componentDidMount();
+  };
+
+  componentDidMount() {
+    axios
+      .get(proxyurl + URL, {
+        headers: {
+          Authorization:
+            "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
+        },
+        params: {
+          term: this.state.post.name,
+          location: "Boston",
+          rating: this.state.post.rating,
+          radius: this.state.post.distance,
+          price: this.state.post.price
+        }
+      })
+      .then(response => {
+        this.setState({
+          data: response.data.businesses,
+          key: response.data.businesses.id
+        });
+        console.log(this.state.data);
+      })
+      .catch(error => {
+        console.log("error 3 " + error);
+      });
+  }
+
+  renderMatches() {
+    return this.state.data.map(data => {
+      return (
+        <Col md="auto">
+          <Card
+            className="text-center"
+            style={{ width: "18rem", height: "12rem" }}
+          >
+            <Card.Body>
+              <Card.Title>{data.name}</Card.Title>
+              <Card.Text>{data.display_phone}</Card.Text>
+              <Card.Text className="bottomCard">
+                Review Count: {data.review_count}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      );
+    });
+  }
+  openSlideMenu() {
+    return <div />;
+  }
   render() {
+    console.log(this.state.post.name);
     return (
       <Router>
         <Switch>
@@ -51,7 +124,11 @@ class App extends Component {
             render={() => {
               return (
                 <div>
-                  <SearchResultsNav />
+                  <SearchResultsNav
+                    handleChange={this.handleChange}
+                    post={this.state.post}
+                    handleSubmit={this.handleSubmit}
+                  />
                   <Container>
                     <Row className="justify-content-md-center">
                       {this.renderMatches()}
@@ -65,7 +142,7 @@ class App extends Component {
                       <a href="/about" className="gh">
                         About
                       </a>
-                      <a href="#" onclick="openSlideMenu()" className="gh">
+                      <a href="#" className="gh">
                         Favorites
                       </a>
                     </div>
@@ -89,6 +166,8 @@ class App extends Component {
     );
   }
 
+<<<<<<< HEAD
+=======
   constructor() {
     super();
     this.state = {
@@ -126,12 +205,15 @@ class App extends Component {
                 Review Count: {data.review_count}
               </Card.Text>
             </Card.Body>
+            <a href="#" onclick="openSlideMenu()" className="fav-star">
+            </a>
           </Card>
         </Col>
       );
     });
   }
 
+>>>>>>> master
   // render() {
   //   return (
   //     <div>
