@@ -35,7 +35,8 @@ class App extends Component {
         name: "",
         radius: "",
         rating: "",
-        price: "1"
+        price: "1",
+        limit: "15"
       },
       jobs: []
     };
@@ -67,7 +68,8 @@ class App extends Component {
           location: "Boston",
           radius: this.state.post.radius,
           rating: this.state.post.rating,
-          price: this.state.post.price
+          price: this.state.post.price,
+          limit: "15"
         }
       })
       .then(response => {
@@ -88,10 +90,13 @@ class App extends Component {
         <Col md="auto">
           <Card
             className="text-center"
-            style={{ width: "18rem", height: "12rem" }}
+            style={{ width: "18rem", height: "20rem"}}
           >
             <Card.Body>
               <Card.Title>{data.name}</Card.Title>
+              <Card.Img
+                style={{width: "10rem", height: "10rem"}}
+                variant="top" src={data.image_url} />
               <Card.Text>{data.display_phone}</Card.Text>
               <Card.Text className="bottomCard">
                 Review Count: {data.review_count}
