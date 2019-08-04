@@ -6,12 +6,9 @@ import Logo from "../images/LogoOpt.png";
 
 // Import Router for React
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect
-} from "react-router-dom";
+    BrowserRouter as Router,
+    Link,
+  } from "react-router-dom";
 
 export default ({ handleChange, routeChange, handleSubmit, post }) => {
   return (
@@ -29,7 +26,7 @@ export default ({ handleChange, routeChange, handleSubmit, post }) => {
                 width="600"
               />
               <div className="home-info">
-                <form
+                <form onSubmit={handleSubmit}
                   action="searchResults.html"
                   method="get"
                   className="online-form"
@@ -42,14 +39,14 @@ export default ({ handleChange, routeChange, handleSubmit, post }) => {
                     value={post.term}
                     placeholder="Whats your crave?"
                   />
-                  <button
-                    type="submit"
-                    className="form-control"
-                    onClick={routeChange}
-                    onClick={handleSubmit}
-                  >
-                    Search
-                  </button>
+                  <Link to="/searchResults">
+                    <button
+                      type="submit"
+                      className="form-control"
+                    >
+                      Search
+                    </button>
+                    </Link>
                 </form>
               </div>
             </div>

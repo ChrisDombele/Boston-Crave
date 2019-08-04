@@ -20,7 +20,6 @@ import {
 
 //Import Pages
 import AboutPage from "./pages/about";
-import ResultsPage from "./pages/searchResults";
 import HomePage from "./pages/home";
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
@@ -56,8 +55,9 @@ class App extends Component {
     this.componentDidMount();
   };
 
-  routeChange() {
-    <Redirect to="/searchResults" />;
+  routeChange = e => {
+    e.preventDefault();
+    this.componentDidMount();
   }
 
   componentDidMount() {
