@@ -35,7 +35,7 @@ class App extends Component {
         name: "",
         radius: "",
         rating: "",
-        price: ""
+        price: "1"
       },
       jobs: []
     };
@@ -71,7 +71,8 @@ class App extends Component {
           term: this.state.post.name,
           location: "Boston",
           radius: this.state.post.radius,
-          rating: this.state.post.rating
+          rating: this.state.post.rating,
+          price: this.state.post.price
         }
       })
       .then(response => {
