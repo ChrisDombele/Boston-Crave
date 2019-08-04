@@ -19,6 +19,9 @@ export default ({ handleChange, handleSubmit, post }) => {
                   value={post.term}
                   placeholder="Whats your crave?"
                 />
+                <button className="btn btn-primary" onClick={handleSubmit}>
+                  Submit
+                </button>
               </div>
             </Col>
           </Row>
@@ -28,11 +31,11 @@ export default ({ handleChange, handleSubmit, post }) => {
               <br />
               <input
                 className="col-12 form-control"
-                name="name"
+                name="radius"
                 onChange={handleChange}
-                type="text"
+                type="number"
                 value={post.radius}
-                placeholder="post name"
+                placeholder="Distance"
               />
             </Col>
             <Col className="col-lg text-center">
@@ -41,7 +44,7 @@ export default ({ handleChange, handleSubmit, post }) => {
               <select
                 className="form-control"
                 onChange={handleChange}
-                name="level"
+                name="rating"
                 value={post.rating}
               >
                 <option value="1.0">✭</option>
@@ -57,7 +60,7 @@ export default ({ handleChange, handleSubmit, post }) => {
               <select
                 className="form-control"
                 onChange={handleChange}
-                name="level"
+                name="price"
                 value={post.price}
               >
                 <option value="1">$</option>
@@ -67,9 +70,6 @@ export default ({ handleChange, handleSubmit, post }) => {
               </select>
             </Col>
           </Row>
-          <button className="btn btn-primary" onClick={handleSubmit}>
-            Submit
-          </button>
         </form>
       </Container>
     </nav>

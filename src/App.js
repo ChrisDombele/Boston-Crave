@@ -33,9 +33,9 @@ class App extends Component {
       data: [],
       post: {
         name: "",
-        radius: "1000",
-        rating: "1.0",
-        price: "4"
+        radius: "",
+        rating: "",
+        price: "1"
       },
       jobs: []
     };
@@ -70,8 +70,8 @@ class App extends Component {
         params: {
           term: this.state.post.name,
           location: "Boston",
+          radius: this.state.post.radius,
           rating: this.state.post.rating,
-          radius: this.state.post.distance,
           price: this.state.post.price
         }
       })
@@ -111,7 +111,6 @@ class App extends Component {
     return <div />;
   }
   render() {
-    console.log(this.state.post.name);
     return (
       <Router>
         <Switch>
@@ -166,54 +165,6 @@ class App extends Component {
     );
   }
 
-<<<<<<< HEAD
-=======
-  constructor() {
-    super();
-    this.state = {
-      data: []
-    };
-  }
-
-  componentDidMount() {
-    axios
-      .get(proxyurl + URL, config)
-      .then(response => {
-        this.setState({
-          data: response.data.businesses,
-          key: response.data.businesses.id
-        });
-        console.log(this.state.data);
-      })
-      .catch(error => {
-        console.log("error 3 " + error);
-      });
-  }
-
-  renderMatches() {
-    return this.state.data.map(data => {
-      return (
-        <Col md="auto">
-          <Card
-            className="text-center"
-            style={{ width: "18rem", height: "12rem" }}
-          >
-            <Card.Body>
-              <Card.Title>{data.name}</Card.Title>
-              <Card.Text>{data.display_phone}</Card.Text>
-              <Card.Text className="bottomCard">
-                Review Count: {data.review_count}
-              </Card.Text>
-            </Card.Body>
-            <a href="#" onclick="openSlideMenu()" className="fav-star">
-            </a>
-          </Card>
-        </Col>
-      );
-    });
-  }
-
->>>>>>> master
   // render() {
   //   return (
   //     <div>
