@@ -26,40 +26,55 @@ import HomePage from "./pages/home";
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const URL = "https://api.yelp.com/v3/businesses/search";
 
-let config = {
-  headers: {
-    Authorization:
-      "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
-  },
-  params: {
-    term: "tacos",
-    location: "Boston"
-  }
-};
-
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       data: [],
-      search: "",
-      headers: {
-        Authorization:
-          "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx",
-        term: "tacos",
-        location: "Boston"
-      }
+      post: {
+        name: "",
+        radius: "1000",
+        rating: "1.0",
+        price: "4"
+      },
+      jobs: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(event) {
-    this.setState({ search: event.target.value });
-  }
+  handleChange = e => {
+    const { name, value } = e.target;
+
+    this.setState(prevState => ({
+      post: { ...prevState.post, [name]: value }
+    }));
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.setState(prevState => ({
+      jobs: [...prevState.jobs, prevState.post],
+      post: { name: "", radius: "", rating: "", price: "" }
+    }));
+    this.componentDidMount();
+  };
 
   componentDidMount() {
     axios
-      .get(proxyurl + URL, params)
+      .get(proxyurl + URL, {
+        headers: {
+          Authorization:
+            "Bearer EElj7yTkL-mqWepweO0Pgb-DQa_Yh9hsbvKPAKFB7dyFcDfAM5yn-a-0TH5I0eqbD8CA8RpbaIenoJ-Jw3Q33OOxz4mz6uct9H-ukaO7HpQXYYkV1Qd0TzDI95E4XXYx"
+        },
+        params: {
+          term: this.state.post.name,
+          location: "Boston",
+          rating: this.state.post.rating,
+          radius: this.state.post.distance,
+          price: this.state.post.price
+        }
+      })
       .then(response => {
         this.setState({
           data: response.data.businesses,
@@ -96,7 +111,7 @@ class App extends Component {
     return <div />;
   }
   render() {
-    console.log(this.state.headers);
+    console.log(this.state.post.name);
     return (
       <Router>
         <Switch>
@@ -110,7 +125,8 @@ class App extends Component {
               return (
                 <div>
                   <SearchResultsNav
-                    value={this.state.search}
+                    handleChange={this.handleChange}
+                    post={this.state.post}
                     handleSubmit={this.handleSubmit}
                   />
                   <Container>
