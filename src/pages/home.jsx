@@ -39,14 +39,13 @@ export default ({ handleChange, routeChange, handleSubmit, post }) => {
                     value={post.term}
                     placeholder="Whats your crave?"
                   />
-                  <Link to="/searchResults">
                     <button
                       type="submit"
                       className="form-control"
+                      onClick={routeChange}
                     >
                       Search
                     </button>
-                    </Link>
                 </form>
               </div>
             </div>

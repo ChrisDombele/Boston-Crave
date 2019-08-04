@@ -35,9 +35,10 @@ class App extends Component {
         radius: "",
         rating: "",
         price: "1",
-        limit: "15"
+        limit: "0"
       },
-      jobs: []
+      jobs: [],
+      fireRedirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -58,6 +59,7 @@ class App extends Component {
   routeChange = e => {
     e.preventDefault();
     this.componentDidMount();
+    this.setState({ fireRedirect: true });
   }
 
   componentDidMount() {
@@ -117,6 +119,8 @@ class App extends Component {
     return <div />;
   }
   render() {
+    const { fireRedirect } = this.state
+
     return (
       <Router>
         <Switch>
@@ -127,12 +131,17 @@ class App extends Component {
             strict
             render={() => {
               return (
+                <div>
                 <HomePage
                   handleChange={this.handleChange}
                   post={this.state.post}
                   handleSubmit={this.handleSubmit}
                   routeChange={this.routeChange}
                 />
+                {fireRedirect && (
+                  <Redirect to="/searchResults"/>
+                )}
+                </div>
               );
             }}
           />
