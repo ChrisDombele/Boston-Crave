@@ -148,6 +148,7 @@ footer a:not(:last-child) {
 
 footer {
   display: inline-block;
+  width: 100%;
 }
 
 .leftdiv {
