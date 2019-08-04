@@ -56,6 +56,10 @@ class App extends Component {
     this.componentDidMount();
   };
 
+  routeChange() {
+    <Redirect to="/searchResults" />;
+  }
+
   componentDidMount() {
     axios
       .get(proxyurl + URL, {
@@ -90,13 +94,15 @@ class App extends Component {
         <Col md="auto">
           <Card
             className="text-center"
-            style={{ width: "18rem", height: "20rem"}}
+            style={{ width: "18rem", height: "20rem" }}
           >
             <Card.Body>
               <Card.Title>{data.name}</Card.Title>
               <Card.Img
-                style={{width: "10rem", height: "10rem"}}
-                variant="top" src={data.image_url} />
+                style={{ width: "10rem", height: "10rem" }}
+                variant="top"
+                src={data.image_url}
+              />
               <Card.Text>{data.display_phone}</Card.Text>
               <Card.Text className="bottomCard">
                 Review Count: {data.review_count}
@@ -114,7 +120,22 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/"
+            exact
+            strict
+            render={() => {
+              return (
+                <HomePage
+                  handleChange={this.handleChange}
+                  post={this.state.post}
+                  handleSubmit={this.handleSubmit}
+                  routeChange={this.routeChange}
+                />
+              );
+            }}
+          />
           <Route
             exact
             path="/searchResults"
@@ -164,18 +185,5 @@ class App extends Component {
       </Router>
     );
   }
-
-  // render() {
-  //   return (
-  //     <div>
-  //       <SearchResultsNav />
-  //       <Container>
-  //         <Row className="justify-content-md-center">
-  //           {this.renderMatches()}
-  //         </Row>
-  //       </Container>
-  //     </div>
-  //   );
-  // }
 }
 export default App;
