@@ -126,6 +126,8 @@ class App extends Component {
                 Review Count: {data.review_count}
               </Card.Text>
             </Card.Body>
+            <a href="#" onclick="openSlideMenu()" className="fav-star">
+            </a>
           </Card>
         </Col>
       );
