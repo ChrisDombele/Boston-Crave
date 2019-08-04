@@ -52,11 +52,6 @@ class App extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
-    this.setState(prevState => ({
-      jobs: [...prevState.jobs, prevState.post],
-      post: { name: "", radius: "", rating: "", price: "" }
-    }));
     this.componentDidMount();
   };
 
