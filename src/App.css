@@ -26,6 +26,10 @@ img {
   border: 0;
 }
 
+.resultsPage {
+  padding-top: 2em;
+}
+
 body {
   padding: 0;
   /* overflow-y: hidden; */
@@ -157,6 +161,7 @@ footer {
 
 .rightdiv {
   float: right;
+  visibility: hidden;
 }
 
 .gh {
