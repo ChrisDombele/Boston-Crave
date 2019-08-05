@@ -107,7 +107,7 @@ class App extends Component {
               />
               <Card.Text>{data.display_phone}</Card.Text>
               <Card.Text className="bottomCard">
-                Review Count: {data.review_count}
+                {data.location.address1}
               </Card.Text>
             </Card.Body>
           </Card>

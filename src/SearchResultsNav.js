@@ -19,10 +19,10 @@ export default ({ handleChange, handleSubmit, post }) => {
                   value={post.term}
                   placeholder="Whats your crave?"
                 />
-                <button className="btn btn-primary" onClick={handleSubmit}>
+              </div>
+              <button className="btn btn-primary" onClick={handleSubmit} style={{visibility: "hidden"}}>
                   Submit
                 </button>
-              </div>
             </Col>
           </Row>
           <Row className="justify-content-md-center">
