@@ -168,21 +168,16 @@ class App extends Component {
                       <a href="/" className="gh">
                         Home
                       </a>
-                      <a href="/about" className="gh">
-                        About
-                      </a>
+                      {/*
                       <a href="#" className="gh">
                         Favorites
                       </a>
+                      */}
                     </div>
-
                     <div className="rightdiv">
-                      <a href="http://google.com" className="gh">
-                        Prev
-                      </a>
-                      <a href="http://google.com" className="gh">
-                        Next
-                      </a>
+                    <a href="/about" className="gh">
+                        About
+                    </a>
                     </div>
                   </footer>
                 </div>

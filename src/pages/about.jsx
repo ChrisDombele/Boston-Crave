@@ -37,17 +37,24 @@ const AboutPage = () => {
                 <div id="developer">
                     <div className="dev-card">
                         <img src={defaultDev}/>
-                        <h3>Chris Dombele</h3>
+                        <h3 style={{fontWeight: 'bold'}}>
+                        Chris Dombele</h3>
+                        <h3>dombelec@wit.edu</h3>
                     </div>
 
                     <div className="dev-card">
                         <img src={defaultDev}/>
-                        <h3>Charlie Plukfangpanya</h3>
+                        <h3 style={{fontWeight: 'bold'}}>
+                        Charlie Plukfangpanya
+                        </h3>
+                        <h3>plukfangpanyap1@wit.edu</h3>
                     </div>
 
                     <div className="dev-card">
                         <img src={defaultDev}/>
-                        <h3>Deni Pasholli</h3>
+                        <h3 style={{fontWeight: 'bold'}}>
+                        Deni Pasholli</h3>
+                        <h3>pashollid@wit.edu</h3>
                     </div>
                 </div>
                 <br/>
