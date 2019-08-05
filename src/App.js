@@ -96,7 +96,7 @@ class App extends Component {
         <Col md="auto">
           <Card
             className="text-center"
-            style={{ width: "18rem", height: "20rem" }}
+            style={{ width: "18rem", height: "21rem" }}
           >
             <Card.Body>
               <Card.Title>{data.name}</Card.Title>
@@ -109,6 +109,8 @@ class App extends Component {
               <Card.Text className="bottomCard">
                 {data.location.address1}
               </Card.Text>
+              <Card.Text>Price: {data.price}</Card.Text>
+              <Card.Text>Rating: {data.rating}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
