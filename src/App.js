@@ -152,7 +152,7 @@ class App extends Component {
             strict
             render={() => {
               return (
-                <div>
+                <div className="resultsPage">
                   <SearchResultsNav
                     handleChange={this.handleChange}
                     post={this.state.post}
